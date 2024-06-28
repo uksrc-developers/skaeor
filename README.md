@@ -14,6 +14,6 @@ Each directory contains a README with more information about the corresponding a
 
 ## Developers
 
-- Ye, Haoyang (Cambridge)
-- Walker, Charlie (Cambridge)
-- Burba, Jacob (Manchester)
+- Ye, Haoyang (UKSRC, University of Cambridge)
+- Walker, Charlie (UKSRC, University of Cambridge)
+- [Burba, Jacob](https://github.com/jburba) (UKSRC, University of Manchester)
