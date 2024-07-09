@@ -10,9 +10,19 @@ In this test, JB ran HERA's [H1C IDR3 power spectrum notebook](https://github.co
 
 In this test, JB ran `hera_pspec` on a subset of the full dataset used by HERA to ensure the python environment can run `hera_pspec` and generate the files that get fed into the notebook.  JB used a subset of the full HERA data for this test so the test would run more quickly.  For this test the three files of interest in this directory are
 
-    - `pspec_params_LPXLTK.yaml`: yaml file containing file paths and analysis parameters for `hera_pspec`
-    - `pspec_pipe.py`: python file which reads in the parameters in `pspec_params_LPXLTK.yaml` and runs `hera_pspec`
-    - `run_pspec_LPXLTK.sh`: slurm sbatch script which calls `pspec_pipe.py`
+- `pspec_params_LPXLTK.yaml`: yaml file containing file paths and analysis parameters for `hera_pspec`
+- `pspec_pipe.py`: python file which reads in the parameters in `pspec_params_LPXLTK.yaml` and runs `hera_pspec`
+- `run_pspec_LPXLTK.sh`: slurm sbatch script which calls `pspec_pipe.py`
+
+These files were used to run `hera_pspec` on NRAO and were run by first creating a directory for the output from slurm via
+```
+mkdir slurm-out
+```
+and then calling `sbatch` via
+```
+sbatch run_pspec_LPXLTK.sh
+```
+Please note that the file paths contained in the scripts used for this test are all defined relative to JB's lustre directories as data were temporarily copied/stored there for this test.  The data and directories should all be readable on NRAO, but they may not be writable.
 
 # UKSRC related links and information
 
