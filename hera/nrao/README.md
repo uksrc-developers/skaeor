@@ -8,9 +8,9 @@ In this test, JB ran HERA's [H1C IDR3 power spectrum notebook](https://github.co
 
 ## Run `hera_pspec`
 
-In this test, JB ran `hera_pspec` on a subset of the full dataset used by HERA to ensure the python environment can run `hera_pspec` and generate the files that get fed into the notebook.  JB used a subset of the full HERA data for this test so the test would run more quickly.  For this test the three files of interest in this directory are
+In this test, JB ran `hera_pspec` on a subset of the full dataset used by HERA to ensure the python environment can run `hera_pspec` and generate the files that get fed into the notebook.  JB used a subset of the full HERA data (4 out of 20 files) for this test so the test would run more quickly.  JB also reduced the number of frequencies and baselines in the `hera_pspec` analysis to further reduce the runtime.  For this test the three files of interest in this directory are
 
-- `pspec_params_LPXLTK.yaml`: yaml file containing file paths and analysis parameters for `hera_pspec`
+- `pspec_params_LPXLTK.yaml`: yaml file containing file paths and analysis parameters for `hera_pspec`.  The changes made in this file to reduce the frequency and baseline axes are marked with in-line comments.
 - `pspec_pipe.py`: python file which reads in the parameters in `pspec_params_LPXLTK.yaml` and runs `hera_pspec`
 - `run_pspec_LPXLTK.sh`: slurm sbatch script which calls `pspec_pipe.py`
 
