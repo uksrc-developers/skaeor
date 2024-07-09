@@ -31,3 +31,27 @@ For a detailed description of the HERA delay power spectrum pipeline see
 - [HERA Collaboration 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...945..124H/abstract): HERA's latest power spectrum results using H1C IDR3 data.  This paper only details changes to the analysis that have been made from the 2022 paper using H1C IDR2 data.
 
 **This repository focuses on reproducing the H1C IDR3 power spectrum results from [HERA Collaboration 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...945..124H/abstract).**
+
+### Power spectrum substeps
+
+There are two substeps which fall under the "power spectrum estimation" umbrella for HERA.
+
+1. Run [`hera_pspec`](https://github.com/HERA-Team/hera_pspec) to calculated per-baseline delay power spectra
+2. Run a [jupyter notebook](https://github.com/HERA-Team/H1C_IDR3_Power_Spectra/blob/main/SPOILERS/All_Epochs_Power_Spectra/H1C_IDR3_Power_Spectra.ipynb) to take the per-baseline delay power spectra and form a one-dimensional, spherically-averaged (in Fourier space) power spectrum
+
+The one-dimensional power spectrum is the ultimate output of HERA's power spectrum pipeline.
+
+## python environment
+
+To create the python environment required for the HERA power spectrum pipeline, we have included a `conda` environment yaml file for convenience.  The environment can be created via
+```
+conda env create -f environment.yaml
+```
+This environment can then be activated via
+```
+conda activate h1c-idr3
+```
+
+## Initial testing on NRAO
+
+Before transferring data to UKSRC resources, tests were run on the NRAO system to verify the python environment.  The files associated with these tests are stored in the `nrao/` directory.  Please see `nrao/README.md` for more details on these tests.
