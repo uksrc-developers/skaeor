@@ -1,6 +1,6 @@
 # NRAO tests
 
-Before transferring data to UKSRC resources, tests were run on the NRAO system to verify the python environment.  These tests are described in the following subsections.
+Before transferring data to UKSRC resources, tests were run on the NRAO system to verify the python environment.  These tests are described in the following subsections.  More information is available on the [H1C IDR3 Power Spectra](https://confluence.skatelescope.org/display/SRCSC/H1C+IDR3+Power+Spectra) confluence page.
 
 ## Run the jupyter notebook
 
