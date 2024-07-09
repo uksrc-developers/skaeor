@@ -67,7 +67,7 @@ data :
   # baseline type restriction in length (meters) and angle (degrees)
   # Warning: this uses all telescope antennas, not data antennas
   # which will cause an antenna-down-selected file to fail
-  bl_len_range : [14, 45]
+  bl_len_range : [14, 45]  # maximum baseline length reduced from 1000 m to 45 m to speed up analysis
   bl_deg_range : [0, 180]
 
   # select baselines manually. This overrides bl_len and bl_deg above
@@ -103,7 +103,7 @@ algorithm :
     cosmo : None
     spw_ranges :
       - [176, 340]
-      # - [535, 697]
+      # - [535, 697]  # second spectral window (band 2) commented out to reduce the frequency axis and speed up analysis
     n_dlys : None
     cov_model : None #'foreground_dependent'
     Jy2mK : True
