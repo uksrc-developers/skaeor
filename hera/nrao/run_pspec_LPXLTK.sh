@@ -13,6 +13,6 @@ cd /lustre/aoc/projects/hera/jburba/uksrc/hera/power-spectra/h1c-idr3/pspec
 
 echo "start: $(date)"
 pspec_dir=/lustre/aoc/projects/hera/jburba/uksrc/skaeor/hera
-${pspec_dir}/pspec_pipe.py ${pspec_dir}/pspec_params_LPXLTK_NRAO.yaml
+${pspec_dir}/../pspec_pipe.py ${pspec_dir}/pspec_params_LPXLTK_NRAO.yaml
 
 echo "end: $(date)"
