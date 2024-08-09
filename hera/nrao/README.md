@@ -54,6 +54,7 @@ In this test, JB ran HERA's [H1C IDR3 power spectrum notebook](https://github.co
 **Confluence pages**
 
 - [H1C IDR3 power spectrum pipeline](https://confluence.skatelescope.org/display/SRCSC/H1C+IDR3+power+spectrum+pipeline)
+- [Generating H1C IDR3 power spectra on NRAO](https://confluence.skatelescope.org/display/SRCSC/Generating+H1C+IDR3+power+spectra+on+NRAO)
 
 **Jira tickets**
 
