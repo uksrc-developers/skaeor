@@ -13,9 +13,9 @@ The full HERA pipeline contains the following steps
 1. Calibration
 2. Radio Frequency Interference (RFI) flagging
 3. Nigh-to-night LST binning
-4. Delay inpainting,
-5. Systematics subtraction,
-6. Time averaging,
+4. Delay inpainting
+5. Systematics subtraction
+6. Time averaging
 7. Power spectrum estimation
 8. Astrophysical parameter estimation
 
@@ -55,3 +55,17 @@ conda activate h1c-idr3
 ## Initial testing on NRAO
 
 Before transferring data to UKSRC resources, tests were run on the NRAO system to verify the python environment.  The files associated with these tests are stored in the `nrao/` directory.  Please see `nrao/README.md` for more details on these tests.
+
+## Follow up testing on Azimuth
+
+An identical test to that run on NRAO was then run on Azimuth.  The files associated with these tests are stored in the `azimuth/` directory.  Please see `azimuth/README.md` for more details on these tests.
+
+# UKSRC related links and information
+
+**Confluence pages**
+
+All relevant confluence pages are nested under [HERA Pipeline Overview](https://confluence.skatelescope.org/display/SRCSC/HERA+Pipeline+Overview).
+
+**Jira links**
+
+All relevant tickets are linked within the SKAEOR demonstrator case epic, [TEAL-617](https://jira.skatelescope.org/browse/TEAL-617).
