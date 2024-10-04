@@ -38,7 +38,7 @@ analysis :
 #---------------------------------------------------------------
 data :
   # data root dir is an absolute path
-  data_root : '/project/HERA_data'
+  data_root : '/project/HERA_data/subset'
 
   # data template basename: optionally with {group} and/or {pol} fields
   data_template : 'zen.grp1.of1.LST.*.sum.LPXLTK.uvh5'
