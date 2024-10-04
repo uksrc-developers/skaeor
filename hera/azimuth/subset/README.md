@@ -1,4 +1,4 @@
-# Azimuth tests
+# Azimuth tests using a subset of H1C IDR3 data
 
 After successfully running the `hera_pspec` pipeline on NRAO, we transferred the same subset of data used on NRAO to Azimuth and ran a similar test on a general.medium Linux with ssh platform.  So far, we have only tested the `hera_pspec` step, the jupyter notebook step will follow in the future (please see the [H1C IDR3 power spectrum pipeline](https://confluence.skatelescope.org/x/sIy2E) confluence page for more details).  This test is described in the following subsections.
 
