@@ -21,8 +21,6 @@ apptainer shell  --shell /bin/bash hera-pspec.sif
 
 ### Confluence pages
 
-- [On The Fly (OTF) Observing Mode](https://confluence.skatelescope.org/x/4ce2E)
-
 ### Jira tickets
 
 - [TEAL-711](https://jira.skatelescope.org/browse/TEAL-711): containerize HERA step 7 (power spectrum) pipeline
