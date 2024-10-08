@@ -6,6 +6,7 @@ dependencies:
   - astropy
   - astropy-healpix
   - cartopy
+  - git
   - gitpython
   - ipython
   - jax
@@ -16,11 +17,11 @@ dependencies:
   - pandas
   - pip
   - python
-  - pyuvdata
+  - pyuvdata==2.4.5
   - rich
   - scipy=1.13
   - scikit-learn
   - six
   - pip:
-    - hera-pspec
+    - hera-pspec==0.4.0
     - git+https://github.com/nkern/simpleQE
