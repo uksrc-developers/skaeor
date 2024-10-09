@@ -2,6 +2,10 @@
 
 **This page is under construction.**
 
+This directory contains files and instructions for building and running an H1C IDR3 power spectrum analysis container.  By default, the files here are designed to work in the `ska-teal-eor` tenancy on Azimuth and are configured for an Azimuth Slurm platform with a single `memory.medium` compute node with 54 CPUs and 172 GB RAM.  Hence, by default, following these instructions will submit a job requesting 54 CPUs and 160 GB RAM.  These quanities can be adjusted, but decreasing the number of CPUs will increase the run time.
+
+Below are a set of instructions for building, interacting with, and running a containerized version of the H1C IDR3 power spectrum pipeline.  Information about the file outputs can be found in the section on [Running the container](#running-the-container).
+
 ## Building the container
 
 The container can be built from the provided `apptainer` definition file via
@@ -22,7 +26,7 @@ apptainer shell  --shell /bin/bash hera-pspec.sif
 After building the container, the two other files of interest are
 
 - `pspec_params_LPXLTK.yaml`: yaml file containing file paths and analysis parameters for `hera_pspec`
-- `run_pspec_LPXLTK.sh`: slurm sbatch script which calls the power spectrum code, `pspec_pipe.py` (this script is already built into the container at `/opt/hera/pspec_pipe.py`)
+- `run_pspec_LPXLTK.sh`: slurm sbatch script which runs the container.  Modifications to the compute resources requested via Slurm can be made to this file.
 
 The analysis of the full set of H1C IDR3 data using the container can then be run (on Azimuth) via
 ```
@@ -34,13 +38,13 @@ where the two `--bind` calls in this case do the following:
 
 2. `--bind /project/power-spectra/h1c-idr3/full` binds the output directory for log and data files to the matching path inside the container.  If you wish to change the output directory, you must change `work_dir` and `out_dir` arguments nested under `io` in `pspec_params_LPXLTK.yaml` and replace `/project/power-spectra/h1c-idr3/full` with the desired output path.
 
-This analysis was designed to run on an Azimuth Slurm platform with a single `memory.medium` compute node with 54 CPUs and 172 GB RAM.  Hence, by default, `run_pspec_LPXLTK.sh` requests 54 CPUs and 160 GB RAM.  These quanities can be adjusted, but decreasing the number of CPUs will increase the run time.
+This analysis was designed to run on an Azimuth Slurm platform with a single `memory.medium` compute node with 54 CPUs and 172 GB RAM.  Hence, by default, `run_pspec_LPXLTK.sh` requests 54 CPUs and 160 GB RAM.  
 
 By default, the output files from `hera_pspec` will be stored in the `ska-teal-eor` tenancy on Azimuth at
 ```
 /project/power-spectra/h1c-idr3/full/
 ```
-The files generated within this directory are described in the table below.
+or, alternatively, in the output directory you've specified (see the description of the second call to `--bind` above for more details on modifying the output directory).  The files generated within this directory are described in the table below.
 
 | File Name | File Size | Description |
 | --------- | --------- | ----------- |
