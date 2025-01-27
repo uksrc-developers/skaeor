@@ -1,3 +1,4 @@
 .ipynb*
 *.sif
 **/slurm-out
+__pycache__
