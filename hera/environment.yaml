@@ -23,5 +23,6 @@ dependencies:
   - scikit-learn
   - six
   - pip:
+    - hera-calibration==3.6.1
     - hera-pspec==0.4.0
     - git+https://github.com/nkern/simpleQE
