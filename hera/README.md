@@ -1,4 +1,4 @@
-# HERA Analysis Pipeline
+https://jira.skatelescope.org/browse/TEAL-791# HERA Analysis Pipeline
 
 This directory contains information and scripts pertaining to the Hydrogen Epoch of Reionization Array ([HERA](https://reionization.org/)) analysis pipeline.
 
@@ -10,16 +10,15 @@ HERA labels its seasonal data according the the observing season and internal da
 
 The full HERA pipeline contains the following steps
 
-1. Calibration
-2. Radio Frequency Interference (RFI) flagging
-3. Nigh-to-night LST binning
-4. Delay inpainting
-5. Systematics subtraction
-6. Time averaging
-7. Power spectrum estimation
-8. Astrophysical parameter estimation
+1. Nightly calibration and RFI flagging
+2. LST binning of data into four "epochs"
+3. Inpainting and systematics subtraction
+4. LST binning of four epochs together
+5. Time averaging and pseudo-Stokes formation
+6. Power spectrum estimation
+7. Astrophysical parameter inference
 
-**For now, this demonstrator case is only focusing on the delay power spectrum estimation step.** 
+**For now, this demonstrator case is only focusing on the power spectrum estimation step.** 
 
 In the future, more analysis steps will be added and documented.
 
@@ -64,7 +63,7 @@ An identical test to that run on NRAO was then run on Azimuth.  The files associ
 
 **Confluence pages**
 
-All relevant confluence pages are nested under [HERA Pipeline Overview](https://confluence.skatelescope.org/display/SRCSC/HERA+Pipeline+Overview).
+All relevant confluence pages are nested under [HERA Pipeline Overview](https://confluence.skatelescope.org/x/fjvwE).
 
 **Jira links**
 
